@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  height: 100vh;
+  margin: 0px;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+nav.main-nav-bar {
+  height: 66px;
+  background-color: rgb(141, 141, 141);
+}
+
+ul.nav-bar {
+  display: flex;
+  list-style-type: none;
+  padding-top: 20px;
+  padding-left: 10px;
+  margin: 0px;
+  font-size: 20px;
+  background-color: rgb(173, 173, 173);
+}
+
+.nav-bar li.active {
+  background-size: 100% 2.2px;
+}
+
+.nav-bar li {
+  padding: 10px;
+  cursor: pointer;
+  margin-left: 20px;
+  background: linear-gradient(to right, black 100%, transparent 100%);
+  background-size: 0% 2.2px;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  transition: background-size 0.3s ease-in-out;
+}
+
+.nav-bar li:hover {
+  background-size: 100% 2.2px;
+}
+
+section.main-content {
+  text-align: center;
+  padding: 20px 30px;
+  height: 100vh;
+  display: grid;
+}
+
+section.darkMode {
+  background-color: rgb(37, 37, 37);
+  color: rgb(223, 223, 223);
+  transition: 0.2s;
+}
+
+section.lightMode {
+  background-color: rgb(223, 223, 223);
+  color: rgb(37, 37, 37);
+  transition: 0.2s;
+}
+
+.main-content button {
+  display: inline-block;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  width: 90px;
+  font-size: 17px;
+  height: 40px;
+  border-radius: 13px;
+  cursor: pointer;
+  border: 1px solid rgb(237, 237, 237);
+}
+
+/* Light mode */
+.lightModeToggle, .toggleButton {
+  background-color: rgb(219, 219, 219);
+  color: rgb(48, 48, 48);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.lightModeToggle:hover,
+.toggleButton:hover {
+  background-color: rgb(48, 48, 48);
+  color: rgb(219, 219, 219);
+  border: 1px solid rgb(237, 237, 237);
+}
+
+/* Dark mode */
+.darkModeToggle {
+  background-color: rgb(48, 48, 48);
+  color: rgb(219, 219, 219);
+  border: 1px solid rgb(237, 237, 237);
+}
+
+.darkModeToggle:hover {
+  background-color: rgb(219, 219, 219);
+  color: rgb(48, 48, 48);
+  border: 1px solid rgb(48, 48, 48);
+}
+
+/* Disable hover effect on mobile devices */
+@media (hover: none) {
+
+  /*There are a few weird issues going on mobile*/
+
+  /*Every time we touch the hover executes first before the final design so there's a slight delay at some point*/
+
+
+  /*We touch the button first so the hover executes and when we navigate to other tab the button will execute the final design. Instead the hover will still the same as the final design so it don't make differences*/
+  .lightModeToggle:hover {
+    background-color: rgb(219, 219, 219);
+    color: rgb(48, 48, 48);
+    border: 1px solid rgb(237, 237, 237);
+  }
+
+  .darkModeToggle:hover {
+    background-color: rgb(48, 48, 48);
+    color: rgb(219, 219, 219);
+    border: 1px solid rgb(48, 48, 48);
+  }
+}
+
+@media (max-width: 768px) {
+
+  ul.nav-bar{
+    font-size: 16px;
+    height: 60px;
+    padding: 0px;
+    justify-content: space-evenly;
+  }
+
+  .nav-bar li {
+    margin-left: 0px;
+    align-self: end;
+    padding: 0px;
+    line-height: 40px;
+  }
+
+}
+
