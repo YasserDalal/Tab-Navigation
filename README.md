@@ -1,7 +1,7 @@
 ## This project is called Tab Navigations
 &nbsp;
 
-#### Kindly check the project here &rarr; <a href="https://yasserdalal.github.io/Small_Projects_Part_1/Project-4/Tabs.html" target="_blank">Tab Navigation</a>
+#### Kindly check the project here &rarr; <a href="https://yasserdalal.github.io/Small_Projects_Part_1/Project-04/Tabs.html" target="_blank">Tab Navigation</a>
 
 &nbsp;
 #### I created this boilerplate code from scratch so that I don't have to repeat myself to do it over and over again.
